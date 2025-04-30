@@ -5,7 +5,7 @@
         const { Schema } = mongooseClient;
         const schema = new Schema(
           {
-            name: { type:  String , required: true, comment: "Name, p, false, true, true, true, true, true, true, , , , ," },
+            names: { type:  String , required: true, comment: "Names, p, false, true, true, true, true, true, true, , , , ," },
 ticketNo: { type:  String , required: true, comment: "Ticket No, p, false, true, true, true, true, true, true, , , , ," },
 
             createdBy: { type: Schema.Types.ObjectId, ref: "users", required: true },

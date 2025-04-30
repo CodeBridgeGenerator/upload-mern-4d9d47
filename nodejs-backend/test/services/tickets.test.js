@@ -14,14 +14,14 @@ describe("tickets service", () => {
   });
 
   describe("#create", () => {
-    const options = {"name":"new value","ticketNo":"new value"};
+    const options = {"names":"new value","ticketNo":"new value"};
 
     beforeEach(async () => {
       ticketCreated = await thisService.create(options);
     });
 
     it("should create a new ticket", () => {
-      assert.strictEqual(ticketCreated.name, options.name);
+      assert.strictEqual(ticketCreated.names, options.names);
 assert.strictEqual(ticketCreated.ticketNo, options.ticketNo);
     });
   });
@@ -35,14 +35,14 @@ assert.strictEqual(ticketCreated.ticketNo, options.ticketNo);
 
   describe("#update", () => {
     let ticketUpdated;
-    const options = {"name":"updated value","ticketNo":"updated value"};
+    const options = {"names":"updated value","ticketNo":"updated value"};
 
     beforeEach(async () => {
       ticketUpdated = await thisService.update(ticketCreated._id, options);
     });
 
     it("should update an existing ticket ", async () => {
-      assert.strictEqual(ticketUpdated.name, options.name);
+      assert.strictEqual(ticketUpdated.names, options.names);
 assert.strictEqual(ticketUpdated.ticketNo, options.ticketNo);
     });
   });

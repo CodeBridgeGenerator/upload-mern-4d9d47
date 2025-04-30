@@ -108,7 +108,7 @@ const SingleTicketsPage = (props) => {
             <div className="card w-full">
                 <div className="grid ">
 
-            <div className="col-12 md:col-6 lg:col-3"><label className="text-sm text-gray-600">Name</label><p className="m-0 ml-3" >{_entity?.name}</p></div>
+            <div className="col-12 md:col-6 lg:col-3"><label className="text-sm text-gray-600">Names</label><p className="m-0 ml-3" >{_entity?.names}</p></div>
 <div className="col-12 md:col-6 lg:col-3"><label className="text-sm text-gray-600">Ticket No</label><p className="m-0 ml-3" >{_entity?.ticketNo}</p></div>
             
 

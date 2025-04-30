@@ -4,7 +4,7 @@ export default (user,count) => {
     let data = [];
     for (let i = 0; i < count; i++) {
         const fake = {
-name: faker.lorem.sentence(""),
+names: faker.lorem.sentence(""),
 ticketNo: faker.lorem.sentence(""),
 
 updatedBy: user._id,

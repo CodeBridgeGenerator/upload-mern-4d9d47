@@ -62,7 +62,7 @@
       "sidebar": [],
       "schemaList": [
         {
-          "fieldName": "name",
+          "fieldName": "names",
           "type": "String",
           "unique": false,
           "lowercase": false,
@@ -77,7 +77,7 @@
           "sortable": true,
           "required": true,
           "component": "p",
-          "label": "Name",
+          "label": "Names",
           "faker": {
             "module": "datatype",
             "subModule": "boolean",
@@ -471,7 +471,7 @@
       "sidebar": [],
       "schemaList": [
         {
-          "fieldName": "name",
+          "fieldName": "names",
           "type": "String",
           "unique": false,
           "lowercase": false,
@@ -486,7 +486,7 @@
           "sortable": true,
           "required": true,
           "component": "p",
-          "label": "Name",
+          "label": "Names",
           "faker": {
             "module": "lorem",
             "subModule": "sentence",

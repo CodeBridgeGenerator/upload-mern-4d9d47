@@ -30,7 +30,7 @@ const TicketsDataTable = ({ items, fields, onEditRow, onRowDelete, onRowClick, s
   const [showDialog, setShowDialog] = useState(false);
   const [data, setData] = useState([]);
 
-const pTemplate0 = (rowData, { rowIndex }) => <p >{rowData.name}</p>
+const pTemplate0 = (rowData, { rowIndex }) => <p >{rowData.names}</p>
 const pTemplate1 = (rowData, { rowIndex }) => <p >{rowData.ticketNo}</p>
     const editTemplate = (rowData, { rowIndex }) => <Button onClick={() => onEditRow(rowData, rowIndex)} icon={`pi ${rowData.isEdit ? "pi-check" : "pi-pencil"}`} className={`p-button-rounded p-button-text ${rowData.isEdit ? "p-button-success" : "p-button-warning"}`} />;
     const deleteTemplate = (rowData, { rowIndex }) => <Button onClick={() => onRowDelete(rowData._id)} icon="pi pi-times" className="p-button-rounded p-button-danger p-button-text" />;
@@ -112,7 +112,7 @@ const pTemplate1 = (rowData, { rowIndex }) => <p >{rowData.ticketNo}</p>
           headerStyle={{ width: "3rem" }}
           body={checkboxTemplate}
         />
-<Column field="name" header="Name" body={pTemplate0} filter={selectedFilterFields.includes("name")} hidden={selectedHideFields?.includes("name")}  sortable style={{ minWidth: "8rem" }} />
+<Column field="names" header="Names" body={pTemplate0} filter={selectedFilterFields.includes("names")} hidden={selectedHideFields?.includes("names")}  sortable style={{ minWidth: "8rem" }} />
 <Column field="ticketNo" header="Ticket No" body={pTemplate1} filter={selectedFilterFields.includes("ticketNo")} hidden={selectedHideFields?.includes("ticketNo")}  sortable style={{ minWidth: "8rem" }} />
             <Column header="Edit" body={editTemplate} />
             <Column header="Delete" body={deleteTemplate} />

@@ -42,8 +42,8 @@ const TicketsCreateDialogComponent = (props) => {
         let ret = true;
         const error = {};
           
-            if (_.isEmpty(_entity?.name)) {
-                error["name"] = `Name field is required`;
+            if (_.isEmpty(_entity?.names)) {
+                error["names"] = `Names field is required`;
                 ret = false;
             }
   
@@ -58,7 +58,7 @@ const TicketsCreateDialogComponent = (props) => {
     const onSave = async () => {
         if(!validate()) return;
         let _data = {
-            name: _entity?.name,ticketNo: _entity?.ticketNo,
+            names: _entity?.names,ticketNo: _entity?.ticketNo,
             createdBy: props.user._id,
             updatedBy: props.user._id
         };
@@ -106,13 +106,13 @@ const TicketsCreateDialogComponent = (props) => {
             style={{ maxWidth: "55vw" }} role="tickets-create-dialog-component">
             <div className="col-12 md:col-6 field">
             <span className="align-items-center">
-                <label htmlFor="name">Name:</label>
-                <InputText id="name" className="w-full mb-3 p-inputtext-sm" value={_entity?.name} onChange={(e) => setValByKey("name", e.target.value)}  required  />
+                <label htmlFor="names">Names:</label>
+                <InputText id="names" className="w-full mb-3 p-inputtext-sm" value={_entity?.names} onChange={(e) => setValByKey("names", e.target.value)}  required  />
             </span>
             <small className="p-error">
-            {!_.isEmpty(error["name"]) ? (
-              <p className="m-0" key="error-name">
-                {error["name"]}
+            {!_.isEmpty(error["names"]) ? (
+              <p className="m-0" key="error-names">
+                {error["names"]}
               </p>
             ) : null}
           </small>
